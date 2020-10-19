@@ -12,15 +12,12 @@ export class JoinTitle {
    * When a player joins, send him a title.
    * @param server Server to activate the plugin on
    */
-  constructor(readonly server: Server) {
-    const offjoin = server.players.on(["join"],
-      this.onjoin.bind(this))
-
-    server.once(["close"], offjoin)
+  constructor(readonly player: Player) {
+    this.init()
   }
 
-  private async onjoin(player: Player) {
+  private async init() {
     const { title, subtitle } = config
-    await player.title(title, subtitle)
+    await this.player.title(title, subtitle)
   }
 }
