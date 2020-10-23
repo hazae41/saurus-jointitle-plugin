@@ -1,4 +1,3 @@
-import type { Server } from "saurus/server.ts";
 import type { Player } from "saurus/player.ts";
 
 export const config = {
