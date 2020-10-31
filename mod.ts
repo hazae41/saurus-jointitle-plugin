@@ -1,4 +1,4 @@
-import type { Player } from "saurus/player.ts";
+import type { Player } from "saurus/src/player.ts";
 
 export const config = {
   title: "Welcome",
